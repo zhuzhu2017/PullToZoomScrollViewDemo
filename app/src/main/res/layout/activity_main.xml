@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tongtong.pulltozoomscrollviewdemo.MainActivity">
+
+    <com.tongtong.pulltozoomscrollviewdemo.PullToZoomScrollView
+        android:id="@+id/zoom_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="154dp"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:placeholderImage="@mipmap/bg_user_center_top"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAccent"></RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        fresco:actualImageScaleType="fitXY"
+                        fresco:placeholderImage="@color/colorPrimary"
+                        fresco:placeholderImageScaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="名称" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="积分" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:placeholderImage="@color/colorAccent"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我是名称" />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </com.tongtong.pulltozoomscrollviewdemo.PullToZoomScrollView>
+
+</LinearLayout>
